@@ -58,6 +58,8 @@ public class MainActivity extends BaseActivity {
                 bundle.putSerializable("book", book);
                 intent.putExtras(bundle);
                 startActivityForResult(intent, 1);
+
+
             }
         });
         bt3.setOnClickListener(new View.OnClickListener() {
@@ -67,6 +69,9 @@ public class MainActivity extends BaseActivity {
                 //toActivity(ListViewActivity.class);
                 Intent intent = new Intent(v.getContext(),ListViewActivity.class);
                 startActivityForResult(intent, 3);
+
+
+
             }
         });
 

@@ -31,6 +31,7 @@ public class DialogActivity extends BaseActivity{
     @OnClick(R.id.dialog_ok)
     public void okClick(){
         switch (checkedID){
+
             case R.id.rb1 :
                 normalDialog();
                 break;
