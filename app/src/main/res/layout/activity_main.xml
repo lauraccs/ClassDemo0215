@@ -22,7 +22,9 @@
             android:gravity="center"
             android:textColor="@color/white"
             />
+
         <ImageButton
+            android:id="@+id/button_left"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="@android:color/transparent"
@@ -30,7 +32,9 @@
             android:src="@drawable/bt_style"
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"/>
+
         <ImageButton
+            android:id="@+id/button_right"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="@drawable/bt_style_xml"

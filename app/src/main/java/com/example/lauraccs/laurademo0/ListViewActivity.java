@@ -102,6 +102,7 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
         viewPagerAdapter.setContent(fragmentList);
         viewPager.setAdapter(viewPagerAdapter);
 
+
         ListViewAdapter listViewAdapter = new ListViewAdapter(this,listResult);
         listView.addHeaderView(listViewHeader);
 
