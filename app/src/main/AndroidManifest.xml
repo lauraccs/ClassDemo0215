@@ -35,8 +35,11 @@
             android:name=".ActivityC"
             android:launchMode="singleTask">
         </activity>
-        <activity android:name=".ActivityD"
+        <activity
+            android:name=".ActivityD"
             android:launchMode="singleInstance">
+        </activity>
+        <activity android:name=".TimerActivity">
         </activity>
     </application>
 

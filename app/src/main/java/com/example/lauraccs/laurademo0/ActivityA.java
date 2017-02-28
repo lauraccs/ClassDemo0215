@@ -16,7 +16,7 @@ public class ActivityA extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.a_activity);
+        setContentView(R.layout.activity_a);
         initialView();
         initialListener();
     }
@@ -61,6 +61,7 @@ public class ActivityA extends AppCompatActivity {
             }
         });
     }
+
 
 
 }

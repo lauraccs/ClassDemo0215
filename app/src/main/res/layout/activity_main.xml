@@ -9,6 +9,7 @@
 
 
     <RelativeLayout
+        android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:layout_alignParentTop="true"
@@ -73,11 +74,24 @@
            android:layout_margin="6dp"
            android:background="@color/white"/>
    </LinearLayout>
-    
-    <ListView
-        android:layout_below="@id/tool_bar"
+
+    <FrameLayout
+        android:layout_below="@id/title_bar"
         android:layout_above="@id/tool_bar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"></ListView>
+        android:background="@color/white">
+        <Button
+            android:id="@+id/main_timer_bt"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Timer"
+            android:textSize="20sp"
+            android:textAllCaps="false"/>
+    </FrameLayout>
+
+
+
+
+
 </RelativeLayout>
