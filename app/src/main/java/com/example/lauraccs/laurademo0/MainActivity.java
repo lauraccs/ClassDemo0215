@@ -19,8 +19,14 @@ import butterknife.OnClick;
 public class MainActivity extends BaseActivity {
     private ImageButton bt1;
     private ImageButton bt3;
-    private ImageButton btLeft;
+//    private ImageButton btLeft;
     private ImageButton btRight;
+
+    @OnClick(R.id.main_animation_bt)
+    public void toAnimation(){
+        toActivity(AnimationActivity.class);
+
+    }
 
     @OnClick(R.id.bt2)
     public void button2Click(){

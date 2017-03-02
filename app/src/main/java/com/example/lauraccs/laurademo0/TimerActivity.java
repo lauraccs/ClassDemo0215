@@ -37,8 +37,8 @@ public class TimerActivity extends BaseActivity {
    final View.OnClickListener start = new View.OnClickListener() {
        @Override
        public void onClick(View v) {
-           editText.setEnabled(false);
            time = Integer.valueOf(editText.getText().toString());
+           editText.setEnabled(false);
            timerButton.setText("Stop");
            timerButton.setOnClickListener(stop);
            mHandler.postDelayed(runnable,1000);
