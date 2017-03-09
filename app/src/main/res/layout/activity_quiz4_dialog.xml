@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_quiz4_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.lauraccs.laurademo0.Quiz4DialogActivity">
+
+<FrameLayout
+    android:id="@+id/fl_quiz4"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="300dp"
+    android:layout_height="400dp">
+
+    <RadioGroup
+        android:id="@+id/rdg_quiz4"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+        <RadioButton
+            android:id="@+id/rb1_quiz4"
+            android:text="Dialog Activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rb2_quiz4"
+            android:text="ListViewActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+
+        <Button
+            android:id="@+id/bt_cancel_quiz4"
+            android:text="Cancel"
+            android:textSize="26sp"
+            android:layout_marginTop="300dp"
+            android:gravity="center_horizontal"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/bt_ok_quiz4"
+            android:layout_width="150dp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="300dp"
+            android:text="OK"
+            android:textSize="26sp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"/>
+
+
+</FrameLayout>
+
+
+</LinearLayout>
