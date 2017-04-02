@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -94,8 +95,10 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener {
         initialView();
         initialListener();
         ButterKnife.bind(this);
+        simpleGestureListener simpleGestListener = new simpleGestureListener();
         mGestureDetector = new GestureDetector(this, new simpleGestureListener());
         fl.setOnTouchListener(this);
+        mGestureDetector.setOnDoubleTapListener(simpleGestListener);
     }
 
     private void initialView(){
@@ -182,67 +185,63 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener {
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        return mGestureDetector.onTouchEvent(event);
+        mGestureDetector.onTouchEvent(event);
+        return false;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        mGestureDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
     }
 
     private class simpleGestureListener extends  GestureDetector.SimpleOnGestureListener{
 
-        public boolean onDown(MotionEvent e){
-            UtilLog.logD("MyGesture", "onDown");
-            toastShort("onDown");
+        public boolean onSingleTapConfirmed(MotionEvent e) {
+            toastShort("onSingleTapConfirmed");
             return true;
-
         }
 
-        public void onShowPress(MotionEvent e){
-            UtilLog.logD("MyGesture", "onShowPress");
+        public boolean onDoubleTap(MotionEvent e) {
+            toastShort("onDoubleTap");
+            return true;
+        }
+
+        public boolean onDoubleTapEvent(MotionEvent e) {
+            toastShort("onDoubleTapEvent");
+            return true;
+        }
+
+        public boolean onDown(MotionEvent e) {
+            toastShort("onDown");
+            return true;
+        }
+
+        public void onShowPress(MotionEvent e) {
             toastShort("onShowPress");
 
         }
 
-        public void onLongPress(MotionEvent e){
-            UtilLog.logD("MyGesture","onLongPress");
-            toastShort("onLongPress");
-
-        }
-
-        public boolean onSingleTapUp(MotionEvent e){
-            UtilLog.logD("MyGesture", "onSingleTapUp");
+        public boolean onSingleTapUp(MotionEvent e) {
             toastShort("onSingleTapUp");
             return true;
         }
 
-        public boolean onSingleTapConfirmed(MotionEvent e){
-            UtilLog.logD("MyGesture", "onSingleTapConfirmed");
-            toastShort("onSingleTapConfirmed");
-            return true;
-
-        }
-
-        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY){
-            UtilLog.logD("MyGesture", "onScroll"+ (e2.getX()-e1.getX())+ " " + distanceX);
+        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
             toastShort("onScroll");
             return true;
+        }
+
+        public void onLongPress(MotionEvent e) {
+            toastShort("onLongPress");
 
         }
 
-        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY){
+        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
             toastShort("onFling");
             return true;
-
         }
 
-        public boolean onDoubleTap(MotionEvent e){
-            toastShort("onDoubleTap");
-            return true;
-
-        }
-
-        public boolean onDoubleTapEvent(MotionEvent e){
-            toastShort("onDoubleTapEvent");
-            return true;
-
-        }
 
 
     }
